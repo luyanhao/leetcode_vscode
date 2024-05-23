@@ -1,3 +1,5 @@
+## 算法部分需要安装 LeetCode 扩展 for vscode
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
