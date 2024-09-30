@@ -40,13 +40,20 @@ function getCycleLength(head){
 
 }
 
-let head = new ListNode(1);
-let node2 = new ListNode(2);
-let node3 = new ListNode(3);
-let node4 = new ListNode(4);
-head.next = node2;
-node2.next = node3;
-node3.next = node4;
-node4.next = node2; // 创建一个环
+function main() {
+    let nodes = [];
+    let count = 10;
+    for(let i = 0; i < count; i++) {
+        nodes[i] = new ListNode(i);
+    }
+    for(let i = 0; i < count; i++) {
+        if (i == count - 1) {
+            nodes[i].next = nodes[1]
+        } else {
+            nodes[i].next = nodes[i + 1];
+        }
+    }
 
-console.log("链表环的长度为：", getCycleLength(head))
+    console.log("链表环的长度为：", getCycleLength(nodes[0]))
+}
+main();
