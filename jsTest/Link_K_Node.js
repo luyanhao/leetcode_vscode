@@ -13,6 +13,10 @@ function findLastKNode(k, head) {
         cur=cur.next;
     }
 
+    if (cur == null) {
+        return null
+    }
+
     while(cur!=null){
         now=now.next;
         cur=cur.next;
@@ -26,14 +30,19 @@ function main() {
     for(let i = 0; i < count; i++) {
         nodes[i] = new ListNode(i);
     }
+    let links = ""
     for(let i = 0; i < count; i++) {
         if (i == count - 1) {
             nodes[i].next = null
+            links += nodes[i].val
         } else {
             nodes[i].next = nodes[i + 1];
+            links += nodes[i].val +" --> "
         }
     }
-    let k = 10
-    console.log("链表倒数第K个结点：", findLastKNode(k, nodes[0]).val)
+    console.log("链表：", links)
+    let k = 11
+    // let k = 2
+    console.log("链表倒数第" + k + "个结点：", findLastKNode(k, nodes[0])?.val)
 }
 main();
