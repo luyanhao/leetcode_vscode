@@ -1,3 +1,4 @@
+// 是否环形链表
 class ListNode {
     constructor(val, next) {
         this.val = (val === undefined ? 0 : val);

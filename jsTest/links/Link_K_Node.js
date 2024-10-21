@@ -1,3 +1,4 @@
+// 计算链表倒数第K个结点
 class ListNode {
     constructor(val, next) {
         this.val = (val === undefined ? 0 : val);

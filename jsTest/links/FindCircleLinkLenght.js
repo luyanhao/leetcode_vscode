@@ -1,3 +1,4 @@
+// 计算环形链表长度
 class ListNode {
     constructor(val, next) {
         this.val = (val === undefined ? 0 : val);
@@ -42,27 +43,6 @@ function getCycleLength(head){
 
 }
 
-function findCycleInNode(head) {
-    let length = getCycleLength(head)
-    if (length == 0) return null;
-    console.log("链表环的长度：", length)
-
-    let first = head;
-    let second = head;
-    while(true){
-        if (length < 0) {
-            first = first.next.next
-            second = second.next
-            if (first == second) {
-                return first
-            }
-        } else {
-            second = second.next
-            length = length - 1
-        }
-    }
-}
-
 function main() {
     let nodes = [];
     let count = 10;
@@ -77,6 +57,6 @@ function main() {
         }
     }
 
-    console.log("链表环的入口结点：", findCycleInNode(nodes[0]).val)
+    console.log("链表环的长度为：", getCycleLength(nodes[0]))
 }
 main();

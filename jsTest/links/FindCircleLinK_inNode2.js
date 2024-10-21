@@ -1,3 +1,4 @@
+// 查找环形链表入口 2
 class ListNode {
     constructor(val, next) {
         this.val = (val === undefined ? 0 : val);
